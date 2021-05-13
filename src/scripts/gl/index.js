@@ -16,8 +16,7 @@ export default new class {
     document.body.appendChild(this.gl.canvas);
 
     this.camera = new Camera(this.gl, { fov: 35 });
-    this.camera.position.set(0, 0, 5);
-    this.camera.lookAt([0, 0, 0]);
+    this.camera.position.set(0, 0, 2.5);
 
     this.scene = new Transform();
 
@@ -58,6 +57,8 @@ export default new class {
     this.controls.update();
 
     this.time += 1 / 60;
+
+    this.scene.children.forEach(mesh => mesh.program.uniforms.uTime.value = this.time);
 
     this.renderer.render({
       scene: this.scene,
