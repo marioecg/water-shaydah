@@ -1,2 +1,2 @@
-# IknowhowIfeel
-Parcel quick setup to make one pagers 📦
+# Water Shaydah
+Shader exercise to study normal mapping and lighting.
